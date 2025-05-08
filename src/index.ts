@@ -35,3 +35,21 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     return expensive
 }
 
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
+function getDayType(day: Day): string {
+    return day === Day.Sunday || day === Day.Saturday ? "Weekend" : "Weekday"
+}
+
+const o1 = getDayType(Day.Sunday)
+const o2 = getDayType(Day.Monday)
+console.log(o1, o2);
