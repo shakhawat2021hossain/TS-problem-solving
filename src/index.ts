@@ -50,6 +50,17 @@ function getDayType(day: Day): string {
     return day === Day.Sunday || day === Day.Saturday ? "Weekend" : "Weekday"
 }
 
-const o1 = getDayType(Day.Sunday)
-const o2 = getDayType(Day.Monday)
-console.log(o1, o2);
+
+
+async function squareAsync(n: number): Promise<number> {
+    return new Promise<number>((resolve, reject) => {
+        setTimeout(() =>{
+            if (n < 0) {
+                reject(new Error("Negative number not allowed"))
+            }
+            resolve(n * n)
+        }, 1000)
+
+    })
+}
+
